@@ -1,0 +1,22 @@
+Address:Moscow, Los Angeles, Amsterdam, Bucharest, Saint Petersburg, Novosibirsk
+Order height: 0, 0.1, 19.9, 20, 20.1, 22, 24.9, 25, 25.1, 27, 29.9, 30, 30.1, 35 ,39.9, 40, 40.1, 55, 59.9, 60, 60.1
+Order length: 0, 0.1, 19.9, 20, 20.1, 22, 24.9, 25, 25.1, 27, 29.9, 30, 30.1, 35, 39.9, 40, 40.1, 55, 59.9, 60, 60.1
+Order width: 0, 0.1, 19.9, 20, 20.1, 22, 24.9, 25, 25.1, 27, 29.9, 30, 30.1, 35, 39.9, 40, 40.1, 55, 59.9, 60, 60.1
+Order weight: 0, 0.001, 5, 9.999, 10, 10.001, 13, 14.999, 15, 15.001,,,,,,,,,,,
+Order cost: 0, 0.01, 5000, 9999.99, 10000, 10000.01, 15000, 19999.99, 20000, 20000.01
+Points: Postamat, Checkout counter, Pickup point, Restaurant, With a discount on shipping, All points
+Payment types: Cash, Count, Online, Prepaid, All payment types
+
+
+
+
+IF [Address] = "Moscow" THEN [Order cost] <= 20000;
+IF [Address] = "Bucharest" THEN [Order cost] <= 10000;
+IF [Address] IN {"Moscow", "Saint Petersburg", "Novosibirsk"} THEN [Order weight] <= 15;
+IF [Address] IN {"Los Angeles", "Amsterdam", "Bucharest"} THEN [Order weight] <= 10;
+IF [Order height] = 60 AND [Order length] <= 40 AND [Order width] <= 40 AND [Order cost] <= 20000 THEN [Address] IN {"Moscow", "Saint Petersburg", "Novosibirsk"};
+IF [Order length] = 60 AND [Order height] <= 40 AND [Order width] <= 40 AND [Order cost] <= 20000 THEN [Address] IN {"Moscow", "Saint Petersburg", "Novosibirsk"};
+IF [Order width] = 60 AND [Order length] <= 40 AND [Order height] <= 40 AND [Order cost] <= 20000 THEN [Address] IN {"Moscow", "Saint Petersburg", "Novosibirsk"};
+IF [Order height] = 30 AND [Order width] <= 20 AND [Order length] <= 25 AND [Order cost] <= 10000 THEN [Address] IN {"Los Angeles", "Amsterdam", "Bucharest"};
+IF [Order length] = 30 AND [Order height] <= 20 AND [Order width] <= 25 AND [Order cost] <= 10000 THEN [Address] IN {"Los Angeles", "Amsterdam", "Bucharest"};
+IF [Order width] = 30 AND [Order length] <= 20 AND [Order height] <= 25 AND [Order cost] <= 10000 THEN [Address] IN {"Los Angeles", "Amsterdam", "Bucharest"};

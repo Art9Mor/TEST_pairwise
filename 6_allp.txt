@@ -1,0 +1,22 @@
+Address	Order height	Order length	Order width	Order weight	Order cost	Points	Payment types
+Moscow	0	0	0	0	0	Postamat	Cash
+Los Angeles	0.1	0.1	0.1	0.001	0.01	Checkout counter	Count
+Amsterdam	19.9	19.9	19.9	5	5000	Pickup point	Online
+Bucharest	20	20	20	9.999	9999.99	Restaurant	Prepaid
+Saint Petersburg	20.1	20.1	20.1	10	10000	With a discount on shipping	All payment types
+Novosibirsk	22	22	22	10.001	10000.01	All points	
+	24.9	24.9	24.9	13	15000		
+	25	25	25	14.999	19999.99		
+	25.1	25.1	25.1	15	20000		
+	27	27	27	15.001	20000.01		
+	29.9	29.9	29.9				
+	30	30	30				
+	30.1	30.1	30.1				
+	35	35	35				
+	39.9	39.9	39.9				
+	40	40	40				
+	40.1	40.1	40.1				
+	55	55	55				
+	59.9	59.9	59.9				
+	60	60	60				
+	60.1	60.1	60.1				
